@@ -1,0 +1,14 @@
+body {
+    background-color: #282c34;
+    font-family: 'Lato', sans-serif;
+}
+
+.App {
+    text-align: center;
+}
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
