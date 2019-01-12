@@ -3,6 +3,7 @@ import './HomePage.css';
 import {Sticky, Segment, Image, Header} from 'semantic-ui-react';
 import {animateScroll as scroll} from 'react-scroll';
 import {NavMenu} from '../NavMenu'
+import {ExperienceList} from '../ExperienceList'
 
 
 export default class HomePage extends Component {
@@ -30,8 +31,8 @@ export default class HomePage extends Component {
                     </div>
                     <div className="primary-tagline">Full Stack</div>
                     <div className="secondary-tagline">Development</div>
-                    <div className="short-desc">Websites with user experience in mind.</div>
-                    <div className="short-desc">Simple, elegant back end.</div>
+                    <div className="short-desc">Emphasis on a clean, user friendly front-end</div>
+                    <div className="short-desc">with a stable, practical back-end.</div>
                 </div>
                 <div className='navbar-placeholder'>
                     <Sticky context={contextRef}>
@@ -67,34 +68,7 @@ export default class HomePage extends Component {
                         </div>
                     </Segment>
                     <br/>
-                    <Segment basic compact className="experience">
-                        <div className="tools">
-                            <div className="primary">Tools I've Used</div>
-                            <div className="tools-container">
-                                <ul>
-                                    <li><Image className="amazon logo" src={require('./images/tools/Amazon_Web_Services_Logo.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/CSS3_logo_and_wordmark.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/django-logo-negative.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/docker-logo.png')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/GitHub_Logo_White.png')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/heroku-logotype-vertical-white.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/HTML5_Logo.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/jQuery_White.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/PostgreSQL_logo.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/python-logo-generic.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/React-logo.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/riot.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/Sass Logo(Color).svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/semantic-ui.svg')}/></li>
-                                    <li><Image className="logo" src={require('./images/tools/Unofficial_JavaScript_logo_2.svg')}/></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="clients">
-                            <div className="primary">Clients I've worked with</div>
-                        </div>
-                    </Segment>
-
+                    <ExperienceList/>
                 </div>
             </div>
         );
