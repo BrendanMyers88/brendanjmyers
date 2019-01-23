@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7ce3fc0f9aff5c7032e9",
-    "url": "/brendanjmyers/static/css/main.c652c8eb.chunk.css"
+    "revision": "96e40e711574d0836d7b",
+    "url": "/brendanjmyers/static/css/main.8b10cd96.chunk.css"
   },
   {
-    "revision": "7ce3fc0f9aff5c7032e9",
-    "url": "/brendanjmyers/static/js/main.7ce3fc0f.chunk.js"
+    "revision": "96e40e711574d0836d7b",
+    "url": "/brendanjmyers/static/js/main.96e40e71.chunk.js"
   },
   {
     "revision": "a0a99bb90a7312dffccc",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/brendanjmyers/static/media/BrendanPhoto.952f016a.jpg"
   },
   {
-    "revision": "191bea564bc741e3583b088b8a4a7616",
+    "revision": "ff8748357218526f803ef6a4bbd7d648",
     "url": "/brendanjmyers/index.html"
   }
 ];
