@@ -50,7 +50,7 @@
     transform: scale(1);
 }
 
-.tools li:hover > .logo{
+.tools li:hover > .logo {
     transition: ease .25s;
     transform: scale(1.25);
 }
@@ -60,6 +60,10 @@
     padding: 10px !important;
 }
 
+.teal-bg {
+    background-color: #43b1b0 !important;
+    padding: 10px !important;
+}
 
 .usage .primary {
     font-size: 32px;
@@ -74,4 +78,60 @@
     text-align: center;
     width: 14em;
     margin: 15px auto 20px;
+}
+
+.experience-lists {
+    text-align: center;
+    font-size: 30px;
+}
+
+.heart-container {
+    margin-bottom: 10px;
+}
+
+.experience-table {
+    margin: 0 auto !important;
+    color: white !important;
+    font-size: 30px !important;
+}
+
+.experience-table td {
+    padding: 2px 50px !important;
+}
+
+.lb-heart {
+    background: 0 0 !important;
+    color: #8cbbff !important;
+    text-shadow: 0 -1px 0 #54b9cd, -1px 0 0 #64c8cd, 0 1px 0 #42c4cd, 1px 0 0 #59c2cd !important;
+}
+
+.inactive {
+    background: 0 0 !important;
+    color: rgba(236, 234, 255, 0.33) !important;
+    text-shadow: 0 -1px 0 rgba(18, 14, 16, 0.29), -1px 0 0 rgba(18, 14, 16, 0.31), 0 1px 0 rgba(18, 14, 16, 0.31), 1px 0 0 rgba(18, 14, 16, 0.34) !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .self-photo {
+        display: none !important;
+    }
+
+    .segment.about {
+        padding: 40px;
+    }
+
+    .experience {
+        display: grid !important;
+        width: 100% !important;
+        grid-auto-rows: 1fr;
+    }
+    .tools {
+        display: grid;
+        width: 100% !important;
+    }
+
+    .usage {
+        display: grid;
+        width: 100% !important;
+    }
 }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './HomePage.css';
-import {Sticky, Segment, Image, Header} from 'semantic-ui-react';
+import {Sticky, Segment, Image} from 'semantic-ui-react';
 import {animateScroll as scroll} from 'react-scroll';
 import {NavMenu} from '../NavMenu'
 import {ExperienceList} from '../ExperienceList'
