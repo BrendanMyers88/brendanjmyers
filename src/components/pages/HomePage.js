@@ -2,14 +2,20 @@ import React, {Component} from 'react';
 import './HomePage.css';
 import {Sticky, Segment, Image} from 'semantic-ui-react';
 import {animateScroll as scroll} from 'react-scroll';
-import {NavMenu} from '../NavMenu'
-import {ExperienceList} from '../ExperienceList'
-
+import {NavMenu} from '../NavMenu';
+import {ExperienceList} from '../ExperienceList';
+import {TweenLite} from "gsap/TweenMax";
 
 export default class HomePage extends Component {
+
     constructor(props) {
         super(props);
         this.scrollToTop = this.scrollToTop.bind(this);
+
+        // reference to the DOM node
+        this.myElement = null;
+        // reference to the animation
+        this.myTween = null;
     }
 
     scrollToTop() {
@@ -18,7 +24,12 @@ export default class HomePage extends Component {
 
     state = {};
 
-    handleContextRef = contextRef => this.setState({contextRef})
+    handleContextRef = contextRef => this.setState({contextRef});
+
+    componentDidMount() {
+        // use the node ref to create the animation
+        this.myTween = TweenLite.from(this.myElement, 1.5, {x: 0, y: 100});
+    }
 
     render() {
         const {contextRef} = this.state;
@@ -31,8 +42,10 @@ export default class HomePage extends Component {
                     </div>
                     <div className="primary-tagline">Full Stack</div>
                     <div className="secondary-tagline">Development</div>
-                    <div className="short-desc">Emphasis on a clean, user friendly front-end</div>
-                    <div className="short-desc">with a stable, practical back-end.</div>
+                    <div className="short-desc" ref={div => this.myElement = div}>
+                        Emphasis on a clean, user friendly front-end
+                        <br/>with a stable, practical back-end.
+                    </div>
                 </div>
                 <div className='navbar-placeholder'>
                     <Sticky context={contextRef}>
@@ -71,6 +84,6 @@ export default class HomePage extends Component {
                     <ExperienceList/>
                 </div>
             </div>
-        );
+    );
     }
-}
+    }

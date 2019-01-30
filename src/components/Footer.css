@@ -1,0 +1,37 @@
+#footer {
+    margin-top: 50px;
+    padding: 25px;
+    right: 0;
+    left: 0;
+    background-color: #1f1f1f;
+    border-radius: 0;
+}
+
+.navbar-placeholder {
+    height: 50px;
+}
+
+#sticky-menu .item {
+    color: #9b9b9b;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.menu-header {
+    font-size: 24px;
+    margin-top: -3px;
+}
+
+#sticky-menu .hamburger-btn {
+    display: none;
+}
+
+@media screen and (max-width: 670px) {
+    #sticky-menu .nav-item {
+        display: none;
+    }
+
+    #sticky-menu .hamburger-btn {
+        display: block;
+    }
+}

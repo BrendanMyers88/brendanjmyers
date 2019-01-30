@@ -1,7 +1,7 @@
 /* LANDING PAGE | HERO SECTION */
 
 .wrapper {
-    height: 300vh;
+    /*height: 300vh;*/
 }
 
 #image-container {
@@ -67,7 +67,7 @@
 .short-desc {
     font-size: 21px;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.5em;
     color: #aeaeae;
     padding: 3px;
 }
