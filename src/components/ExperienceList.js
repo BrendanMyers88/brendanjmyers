@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ExperienceList.css';
+import './ExperienceList.scss';
 import {Image, Segment, Icon, Table} from 'semantic-ui-react';
 
 export class ExperienceList extends Component {

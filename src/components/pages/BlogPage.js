@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import './BlogPage.css'
-import './HomePage.css'
+import './BlogPage.scss'
+import './HomePage.scss'
 import {NavMenu} from "../NavMenu";
 import {Sticky} from "semantic-ui-react";
 

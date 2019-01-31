@@ -1,0 +1,48 @@
+$primary-color: #0081f7;
+@import '../loaders.css/src/animations/ball-scale-ripple-multiple.scss';
+
+.loader-active {
+  display: block;
+  text-align: center;
+}
+
+.loader-container {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loader-hidden {
+  display: none;
+}
+
+
+.loader-text {
+  margin-top: 50px;
+  color: $primary-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+body {
+  background-color: #282c34;
+  font-family: 'Lato', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}

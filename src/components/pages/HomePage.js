@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import './HomePage.css';
+import ReactDOM from 'react-dom';
+import './HomePage.scss';
 import {Sticky, Segment, Image} from 'semantic-ui-react';
 import {animateScroll as scroll} from 'react-scroll';
 import {NavMenu} from '../NavMenu';
 import {ExperienceList} from '../ExperienceList';
-import {TweenLite} from "gsap/TweenMax";
+import {TweenLite, Elastic} from "gsap/TweenMax";
+import Loader from 'react-loaders';
 
 export default class HomePage extends Component {
 
@@ -13,7 +15,8 @@ export default class HomePage extends Component {
         this.scrollToTop = this.scrollToTop.bind(this);
 
         // reference to the DOM node
-        this.myElement = null;
+        this.shortDesc = null;
+        this.fadeLoader = null;
         // reference to the animation
         this.myTween = null;
     }
@@ -22,13 +25,26 @@ export default class HomePage extends Component {
         scroll.scrollToTop();
     }
 
-    state = {};
+    state = {
+        selectedType: 'ball-scale-ripple-multiple',
+        active: true
+    };
 
     handleContextRef = contextRef => this.setState({contextRef});
 
     componentDidMount() {
+        ReactDOM.findDOMNode(this).className = "container loaded";
+
+        this.myTween = TweenLite.to(this.fadeLoader, 0.75, {opacity: "0", delay: '.9', zIndex: '-1'});
+
         // use the node ref to create the animation
-        this.myTween = TweenLite.from(this.myElement, 1.5, {x: 0, y: 100});
+    }
+
+    renderLoader() {
+        return <div className="loader-container" ref={div => this.fadeLoader = div}>
+            <Loader type='ball-scale-ripple-multiple' active={this.state.active} size='medium'/>
+            <div className="loader-text">Loading...</div>
+        </div>
     }
 
     render() {
@@ -36,13 +52,15 @@ export default class HomePage extends Component {
 
         return (
             <div className="wrapper" ref={this.handleContextRef}>
+                {this.renderLoader(this.state.selectedType)}
+
                 <div id="image-container">
                     <div className="hero-text-container">
                         <h1 className="hero-header"><span className="primary">Brendan</span> Myers</h1>
                     </div>
                     <div className="primary-tagline">Full Stack</div>
                     <div className="secondary-tagline">Development</div>
-                    <div className="short-desc" ref={div => this.myElement = div}>
+                    <div className="short-desc">
                         Emphasis on a clean, user friendly front-end
                         <br/>with a stable, practical back-end.
                     </div>
@@ -84,6 +102,6 @@ export default class HomePage extends Component {
                     <ExperienceList/>
                 </div>
             </div>
-    );
+        );
     }
-    }
+}

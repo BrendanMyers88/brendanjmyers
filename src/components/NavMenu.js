@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './NavMenu.css';
+import './NavMenu.scss';
 import {Menu, Sidebar} from 'semantic-ui-react';
 import {animateScroll as scroll} from 'react-scroll'
 
